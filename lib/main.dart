@@ -86,29 +86,42 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Row(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Type something...',
-                  filled: true,
-                  fillColor: Colors.grey[800],
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide.none,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: 'Type something...',
+                        filled: true,
+                        fillColor: Colors.grey[800],
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          borderSide: BorderSide.none,
+                        ),
+                      ),
+                    ),
                   ),
-                ),
+                  SizedBox(width: 8), // Add some spacing between TextField and Send button
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle send button press
+                      // You can implement the logic to send the message here
+                    },
+                    child: Text("Send"),
+                  ),
+                ],
               ),
             ),
           ),
-          Container(
-              child: ElevatedButton(
-                  onPressed: () {}, child: Icon(Icons.send_rounded)))
         ],
       ),
+
     );
   }
 }
