@@ -113,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       // Handle send button press
                       // You can implement the logic to send the message here
                     },
-                    child: Text("Send"),
+                    child: Icon(Icons.arrow_circle_up_rounded,size: 45,),
                   ),
                 ],
               ),
