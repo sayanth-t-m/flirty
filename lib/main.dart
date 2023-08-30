@@ -99,44 +99,63 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: [Expanded(child: Container(color: Color(0xff28222d),child: Text("Container"),width: 400,height: 640,)),
+        children: [
+          Expanded(
+              child: Container(
+            color: Color(0xff1c1b1f),
+            child: Center(child: Text("Container")),
+            width: 400,
+            height: 640,
+          )),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 Expanded(
-                  child: TextField(
-                    controller: _textEditingController,
-                    onChanged: (value) {
-                      setState(() {
-                        isInputEmpty = value.isEmpty;
-                      });
-                    },
-                    maxLines: null, // Allow the TextField to have unlimited lines
-                    keyboardType: TextInputType.multiline, // Enable multiline input
-                    decoration: InputDecoration(
-                      hintText: 'Type something...',
-                      filled: true,
-                      fillColor: Colors.grey[900],
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                        borderSide: BorderSide.none,
-                      ),
-                      contentPadding: const EdgeInsets.symmetric(
-                        vertical: 8.0, // Increase the vertical padding
-                        horizontal: 20.0,
+                  child: Container(color: Colors.cyanAccent,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.deepPurple, // Dark violet color
+                          blurRadius: 10.0, // Adjust the blur radius as needed
+                          offset: Offset(0, 4), // Adjust the shadow's offset
+                        ),
+                      ],
+                    ),
+                    child: TextField(
+                      controller: _textEditingController,
+                      onChanged: (value) {
+                        setState(() {
+                          isInputEmpty = value.isEmpty;
+                        });
+                      },
+                      maxLines: null,
+                      keyboardType: TextInputType.multiline,
+                      decoration: InputDecoration(
+                        hintText: 'Type something...',
+                        filled: true,
+                        fillColor: Colors.grey[900],
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                          borderSide: BorderSide.none,
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                          vertical: 8.0,
+                          horizontal: 20.0,
+                        ),
                       ),
                     ),
-                  ),
+                  )
+
                 ),
                 const SizedBox(width: 8),
                 ElevatedButton(
                   onPressed: isInputEmpty
                       ? null
                       : () {
-                    // Handle send button press
-                    // You can implement the logic to send the message here
-                  },
+                          // Handle send button press
+                          // You can implement the logic to send the message here
+                        },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: isInputEmpty ? Color(0xff212121) : null,
                   ),
@@ -151,7 +170,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-
               ],
             ),
           ),
