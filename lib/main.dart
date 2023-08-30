@@ -112,13 +112,13 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Row(
               children: [
                 Expanded(
-                  child: Container(color: Colors.cyanAccent,
-                    decoration: BoxDecoration(
+                  child: Container(
+                    decoration: BoxDecoration(color: Colors.cyanAccent,borderRadius: BorderRadius.circular(30),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.deepPurple, // Dark violet color
-                          blurRadius: 10.0, // Adjust the blur radius as needed
-                          offset: Offset(0, 4), // Adjust the shadow's offset
+                          color: Color(0xff432e80), // Dark violet color
+                          blurRadius: 8.0, // Adjust the blur radius as needed
+                          offset: Offset(0, 0), // Adjust the shadow's offset
                         ),
                       ],
                     ),
