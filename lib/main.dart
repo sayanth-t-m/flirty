@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
-        children: [Container(),
+        children: [Expanded(child: Container(color: Color(0xff28222d),child: Text("Container"),width: 400,height: 640,)),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
