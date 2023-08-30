@@ -67,14 +67,11 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 const Padding(
                   padding: EdgeInsets.only(top: 10.0),
-                  child: Text(
-                    "NERD",
-                    // style: txtstyle(), // You didn't provide the txtstyle function, so using the default style.
-                  ),
+                  child: Text("NERD"),
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.only(left: 12.0, right: 12, top: 12),
+                  const EdgeInsets.only(left: 12.0, right: 12, top: 12),
                   child: SwitcherButton(
                     value: switchValue,
                     onChange: (value) {
@@ -87,10 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const Padding(
                   padding: EdgeInsets.only(top: 10.0),
-                  child: Text(
-                    "SIMP",
-                    // style: txtstyle(), // You didn't provide the txtstyle function, so using the default style.
-                  ),
+                  child: Text("SIMP"),
                 ),
               ],
             ),
@@ -101,24 +95,27 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Expanded(
-              child: Container(
-            color: Color(0xff1c1b1f),
-            child: Center(child: Text("Container")),
-            width: 400,
-            height: 640,
-          )),
+            child: Container(
+              color: Color(0xff1c1b1f),
+              child: Center(child: Text("Container")),
+              width: 400,
+              height: 640,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 Expanded(
                   child: Container(
-                    decoration: BoxDecoration(color: Colors.cyanAccent,borderRadius: BorderRadius.circular(30),
+                    decoration: BoxDecoration(
+                      color: Colors.cyanAccent,
+                      borderRadius: BorderRadius.circular(30),
                       boxShadow: [
                         BoxShadow(
-                          color: Color(0xff432e80), // Dark violet color
-                          blurRadius: 8.0, // Adjust the blur radius as needed
-                          offset: Offset(0, 0), // Adjust the shadow's offset
+                          color: Color(0xff432e80),
+                          blurRadius: 5.0,
+                          offset: Offset(0, 0),
                         ),
                       ],
                     ),
@@ -145,31 +142,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                  )
-
+                  ),
                 ),
                 const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: isInputEmpty
-                      ? null
-                      : () {
-                          // Handle send button press
-                          // You can implement the logic to send the message here
-                        },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: isInputEmpty ? Color(0xff212121) : null,
-                  ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: isInputEmpty ? Color(0xff212121) : null,
+                if (!isInputEmpty)  // Conditionally render the ElevatedButton
+                  ElevatedButton(
+                    onPressed: () {
+                      // Handle send button press
+                      // You can implement the logic to send the message here
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shadowColor: Color(0xff432e80),
+                      backgroundColor: Colors.transparent,
                     ),
-                    child: const Icon(
-                      Icons.arrow_circle_up_rounded,
-                      size: 40,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: Color(0xff1c1b1f),
+                      ),
+                      child: const Icon(
+                        Icons.arrow_circle_up_rounded,
+                        size: 45,
+                      ),
                     ),
                   ),
-                ),
               ],
             ),
           ),
