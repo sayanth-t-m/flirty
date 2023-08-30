@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Nerd GPT',
+      title: 'Pluto',
       theme: ThemeData.dark(
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Nerd GPT'),
+      home: const MyHomePage(title: 'Pluto'),
     );
   }
 }
