@@ -49,7 +49,7 @@ Flutter: Flutter is a popular cross-platform framework for mobile app developmen
 
 paLm API: Pluto utilizes Google's paLm API, a generative language model, to create flirty pickup lines and responses.
 
-Acknowledgments
+Acknowledgements
 Pluto was inspired by the creativity and innovation of Google's generative language models.
 
 Special thanks to the Flutter community for their support and resources.
@@ -62,4 +62,4 @@ Have questions or feedback? Feel free to reach out:
 
 Email: sayanth.t.m9090@gmail.com
 
-GitHub: sayanth-t-m
+GitHub: https://github.com/sayanth-t-m
